@@ -18,7 +18,7 @@ if __name__=="__main__":
         if name in ['-i', '--input']:
             input_file = value
         if name in ['-n', '--vocab_size']:
-            vocab_size = value
+            vocab_size = int(value)
         if name in ['-o', '--output']:
             output_file = value
 

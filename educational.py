@@ -174,14 +174,14 @@ def bpe_train(
         if visualise:
             print(f"The current most common pair is {most_common_pair[0]} + {most_common_pair[1]}")
             print(f"So we made {token_bytes} our {len(ranks)}th token")
-            if visualise in ["colour", "color"]:
-                print("Now the first fifty words in our training data look like:")
-                visualise_tokens([token for word in words[:50] for token in word])
-            elif visualise == "simple":
-                print("Now the first twenty words in our training data look like:")
-                for word in words[:20]:
-                    print(word)
-            print("\n")
+            # if visualise in ["colour", "color"]:
+            #     print("Now the first fifty words in our training data look like:")
+            #     visualise_tokens([token for word in words[:50] for token in word])
+            # elif visualise == "simple":
+            #     print("Now the first twenty words in our training data look like:")
+            #     for word in words[:20]:
+            #         print(word)
+            # print("\n")
 
     return ranks
 
