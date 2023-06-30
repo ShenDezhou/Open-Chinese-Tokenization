@@ -117,3 +117,8 @@ dmypy.json
 .pyre/
 
 e1k_base/
+c1k_base/
+cl100k_base/
+p50k_base/
+r50k_base/
+xianjian_test.json
