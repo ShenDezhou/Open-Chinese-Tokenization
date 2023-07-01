@@ -44,7 +44,7 @@ tokens = enc.encode("First, you know Caius Marcius is chief enemy to the people.
 [cl100k_base]: https://transformers-models.obs.cn-north-4.myhuaweicloud.com/gpt/tokenizer/cl100k_base.tiktoken
 [e1k_base]: https://transformers-models.obs.cn-north-4.myhuaweicloud.com/gpt/tokenizer/e1k_base.ticktoken
 [c1k_base]: https://transformers-models.obs.cn-north-4.myhuaweicloud.com/gpt/tokenizer/c1k_base.tiktoken
-[c10k_base]:
+[c10k_base]: https://transformers-models.obs.cn-north-4.myhuaweicloud.com/gpt/tokenizer/c10k_base.tiktoken
 
 # 压缩率对比
 
@@ -53,17 +53,17 @@ tokens = enc.encode("First, you know Caius Marcius is chief enemy to the people.
 > 压缩率，描述压缩文本符号的效果，是文本压缩后的token数大小与压缩前的大小之比。压缩率越小，说明分词器对文本编码效率越高。
 > 这里我们选择p50k_base作为基线，这是GPT2的分词器，使用较为广泛。
 
-| model    | token数 | 压缩率        |
-|----------|----|------------|
-|p50k_base | 758757 | 100%       |
-|r50k_base | 758757 | 100%       |
-|cl100k_base | 467011 | 61.5494%   |
-|e1k_base  | 1084408 | 142.919%   | 
-|c1k_base  | 414715 | 54.6571% | 
-|c10k_base |  |         | 
+| model    | token数 | 压缩率      |
+|----------|----|----------|
+|p50k_base | 758757 | 100%     |
+|r50k_base | 758757 | 100%     |
+|cl100k_base | 467011 | 61.5494% |
+|e1k_base  | 1084408 | 142.919% | 
+|c1k_base  | 414715 | 54.6571% |
+|c10k_base | 257976 | 33.9998% | 
 
 从上述表格可见，GPT3.5/4的压缩率与GPT2相比提升约39%，GPT3.5/4的词表数比GPT2增加了一倍，但压缩率显著提升。
-我们在中文语料上训练的c1k分词器压缩率比GPT4提升约7%。
+我们在中文语料上训练的c1k分词器压缩率比GPT4提升约7%,c10k提升约27%。
 我们在英文语料上训练的e1k分词器压缩率下降约43%。
 
 由此可见，在中文领域重新训练分词器有利于压缩token长度，仅用GPT4编码器1%的词表数，取得了编码效率优势。
