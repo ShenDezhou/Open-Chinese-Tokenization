@@ -3,6 +3,9 @@ import pandas
 from use_tiktoken import get_encoding
 
 enc_dic = {
+    'c10k': 'c10k_base/c10k_base.tiktoken',
+    'c20k': 'c20k_base/c20k_base.tiktoken',
+    'c80k': 'c80k_base/c80k_base.tiktoken',
     'e1k': 'e1k_base/e1k_base.tiktoken',
     'c1k': 'c1k_base/c1k_base.tiktoken',
     'p50k': 'p50k_base/p50k_base.tiktoken',
